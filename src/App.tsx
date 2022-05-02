@@ -3,18 +3,15 @@ interface ButtonProps {
 }
 
 function Button(props: ButtonProps) {
-  return <button>{props.text}</button>
+  return <button className="bg-violet-500 px-4">{props.text ?? 'Default'}</button>
 }
 
 function App() {
   return (
-    <div>
-      <Button text="Enviar" /> <br/> <br/>
-      <Button text="ok" />     <br/> <br/>
-      <Button text="CPF" />    <br/> <br/>
-      <Button text="nome" />   <br/> <br/>
-      <Button text="RG" />     <br/> <br/>
-      <Button text="nascimento" /> 
+    <div className="flex gap-2">
+      <Button text="Enviar" /> 
+      <Button text="ok" />     
+  
     </div>
   )
 }
